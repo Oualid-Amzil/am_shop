@@ -1,0 +1,79 @@
+.header {
+  width: 100%;
+  box-shadow: 1px 2px 11px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 1px 2px 11px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 1px 2px 11px 0px rgba(0, 0, 0, 0.75);
+}
+
+.first__ele {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 60px;
+  background-color: rgb(23, 22, 22);
+}
+
+.truck {
+  font-size: 30px;
+  color: rgb(242, 157, 11);
+}
+
+.first__ele > p {
+  color: #fff;
+  font-family: "Cardo";
+}
+
+.second__ele {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 60px;
+  border-bottom: 2px solid rgb(127, 127, 200);
+}
+
+.logo > h1 {
+  font-size: 43px;
+}
+
+.bag {
+  font-size: 50px;
+  color: rgb(127, 127, 200);
+  transform: rotate(-10deg);
+}
+
+.search__bar {
+  display: flex;
+  align-items: center;
+  border: 2px solid rgb(127, 127, 200);
+  width: 400px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.search__bar > input {
+  padding: 12px 10px;
+  flex: 1;
+}
+
+.search__bar > button {
+  padding: 12px 20px;
+  background-color: rgb(109, 109, 184);
+  color: #fff;
+  font-family: "PT Serif";
+}
+
+.heart__cart {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.heart {
+  color: rgb(127, 127, 200);
+  font-size: 30px;
+}
+
+.cart {
+  color: rgb(127, 127, 200);
+  font-size: 30px;
+}
