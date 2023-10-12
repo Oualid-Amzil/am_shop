@@ -1,0 +1,130 @@
+.lastElement {
+  padding: 30px 100px;
+}
+
+.lastElement__container {
+  width: 100%;
+  background-color: rgb(127, 127, 200, 1);
+  display: flex;
+  align-items: center;
+  padding: 30px 50px;
+  border-radius: 10px;
+}
+
+.lastElement__left {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 12px;
+  color: #fff;
+}
+
+.lastElement__left > p {
+  font-size: 20px;
+  font-family: "Cardo";
+}
+
+.lastElement__left > h1 {
+  font-size: 50px;
+  max-width: 600px;
+}
+
+.lastElement__left > button {
+  background-color: #111;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 17px;
+  cursor: pointer;
+  transition: all 200ms ease;
+}
+
+.lastElement__right {
+  width: 40%;
+}
+
+.lastElement__right > img {
+  width: 80%;
+  object-fit: contain;
+}
+
+@media (max-width: 1200px) {
+  .lastElement__left > h1 {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .lastElement__left > h1 {
+    font-size: 35px;
+  }
+
+  .lastElement__left > p {
+    font-size: 18px;
+  }
+
+  .lastElement__left > h2 {
+    font-size: 20px;
+  }
+
+  .lastElement__left > button {
+    gap: 4px;
+    padding: 6px 16px;
+
+    font-size: 15px;
+  }
+
+  .arrow {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 800px) {
+  .lastElement {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 750px) {
+  .lastElement__container {
+    padding: 30px;
+  }
+
+  .lastElement__left {
+    gap: 8px;
+  }
+
+  .lastElement__left > h1 {
+    font-size: 25px;
+  }
+
+  .lastElement__left > p {
+    font-size: 15px;
+  }
+
+  .lastElement__left > h2 {
+    font-size: 17px;
+  }
+
+  .lastElement__left > button {
+    gap: 4px;
+    padding: 6px 16px;
+
+    font-size: 14px;
+  }
+
+  .arrow {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 500px) {
+  .lastElement {
+    display: none;
+  }
+}

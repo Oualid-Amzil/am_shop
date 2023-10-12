@@ -1,0 +1,75 @@
+.authscreen__left {
+  width: 50%;
+}
+
+.delete {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background-color: transparent;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 200ms ease;
+}
+
+.delete:hover {
+  transform: scale(1.2);
+}
+
+.auth__xmark {
+  color: #111;
+  font-size: 30px;
+  color: #fff;
+}
+
+.left__content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  background-color: rgb(127, 127, 200, 0.5);
+  position: relative;
+}
+
+.left__content > button {
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 50%;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all 200ms ease;
+  box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.75);
+}
+
+.left__content > button:hover {
+  transform: scale(1.1);
+}
+
+.facebook {
+  background-color: #1450ab;
+  color: white;
+  font-size: 18px;
+}
+
+.google {
+  background-color: aliceblue;
+  color: #111;
+  font-size: 18px;
+}
+
+.microsoft {
+  background-color: #59a7eb;
+  color: white;
+  font-size: 18px;
+}
+
+.leftcontent__icon {
+  font-size: 30px;
+}

@@ -1,31 +1,32 @@
 .header {
   width: 100%;
-  box-shadow: 1px 2px 11px 0px rgba(0, 0, 0, 0.75);
-  -webkit-box-shadow: 1px 2px 11px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 1px 2px 11px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.75);
 }
 
 .first__ele {
   display: flex;
   align-items: center;
   gap: 10px;
-  padding: 15px 60px;
+  padding: 5px 60px;
   background-color: rgb(23, 22, 22);
 }
 
 .truck {
-  font-size: 30px;
+  font-size: 25px;
   color: rgb(242, 157, 11);
 }
 
 .first__ele > p {
+  font-size: 15px;
   color: #fff;
   font-family: "Cardo";
 }
 
 .second__ele {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-between;
   padding: 10px 60px;
   border-bottom: 2px solid rgb(127, 127, 200);
@@ -33,6 +34,7 @@
 
 .logo > h1 {
   font-size: 43px;
+  color: #111;
 }
 
 .bag {
@@ -44,28 +46,95 @@
 .search__bar {
   display: flex;
   align-items: center;
-  border: 2px solid rgb(127, 127, 200);
-  width: 400px;
+  border: 3px solid rgb(127, 127, 200);
+  padding: 2px 5px;
+  width: 50px;
+
   border-radius: 10px;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 400ms linear;
 }
 
-.search__bar > input {
-  padding: 12px 10px;
+.search__bar:hover {
+  width: 300px;
+}
+
+.search__bar:hover input {
+  display: block;
   flex: 1;
 }
 
-.search__bar > button {
-  padding: 12px 20px;
-  background-color: rgb(109, 109, 184);
+.search__bar:hover button {
+  background-color: rgb(127, 127, 200);
   color: #fff;
+}
+
+.search__bar > input {
+  display: none;
+  height: 40px;
+  padding: 12px 10px;
+  transition: all 400ms linear;
+}
+
+.search__bar > button {
+  width: 35px;
+  height: 35px;
+
+  border-radius: 10px;
+
+  background-color: #fff;
   font-family: "PT Serif";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 400ms linear;
+}
+
+.search__bar > button:hover {
+  background-color: #111;
+}
+
+.search__icon {
+  font-size: 20px;
 }
 
 .heart__cart {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
+}
+
+.heart__cart > button {
+  background-color: transparent;
+  cursor: pointer;
+  position: relative;
+  transition: all 200ms ease;
+}
+
+.heart__cart > button:hover {
+  transform: scale(1.1);
+}
+
+.heart__cart > button > span {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: red;
+  color: #fff;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 600;
 }
 
 .heart {
@@ -76,4 +145,165 @@
 .cart {
   color: rgb(127, 127, 200);
   font-size: 30px;
+}
+
+@media (max-width: 1000px) {
+  .first__ele {
+    padding: 5px 30px;
+  }
+
+  .second__ele {
+    padding: 10px 30px;
+  }
+}
+
+@media (max-width: 900px) {
+  .logo > h1 {
+    font-size: 38px;
+  }
+
+  .bag {
+    font-size: 45px;
+  }
+
+  .search__bar:hover {
+    width: 250px;
+  }
+
+  .heart {
+    font-size: 26px;
+  }
+
+  .cart {
+    font-size: 26px;
+  }
+
+  .heart__cart > h3 {
+    font-size: 18px;
+  }
+
+  .heart__cart > button > span {
+    top: -8px;
+    right: -8px;
+
+    width: 18px;
+    height: 18px;
+    font-size: 10px;
+    font-weight: 600;
+  }
+}
+
+@media (max-width: 760px) {
+  .truck {
+    font-size: 20px;
+  }
+
+  .first__ele > p {
+    font-size: 12px;
+  }
+
+  .logo > h1 {
+    font-size: 34px;
+  }
+
+  .bag {
+    font-size: 41px;
+  }
+
+  .search__bar:hover {
+    width: 210px;
+  }
+
+  .heart {
+    font-size: 24px;
+  }
+
+  .cart {
+    font-size: 24px;
+  }
+
+  .heart__cart > h3 {
+    display: none;
+  }
+
+  .search__bar {
+    width: 45px;
+    border-radius: 8px;
+  }
+
+  .search__bar > button {
+    width: 28px;
+    height: 31px;
+
+    border-radius: 8px;
+  }
+
+  .search__icon {
+    font-size: 17px;
+  }
+
+  .search__bar > input {
+    height: 30px;
+    padding: 8px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 600px) {
+  .search__bar {
+    display: none;
+  }
+
+  .heart {
+    font-size: 28px;
+  }
+
+  .cart {
+    font-size: 28px;
+  }
+
+  .heart__cart > h3 {
+    display: inline-block;
+    font-size: 15px;
+  }
+
+  .heart__cart > button > span {
+    top: -9px;
+    right: -9px;
+
+    width: 18px;
+    height: 18px;
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 500px) {
+  .heart__cart > h3 {
+    display: none;
+  }
+
+  .logo > h1 {
+    font-size: 30px;
+  }
+
+  .bag {
+    font-size: 34px;
+  }
+
+  .heart {
+    font-size: 22px;
+  }
+
+  .cart {
+    font-size: 22px;
+  }
+
+  .heart__cart > button > span {
+    top: -8px;
+    right: -8px;
+
+    width: 16px;
+    height: 16px;
+    font-size: 10px;
+  }
 }

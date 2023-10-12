@@ -1,0 +1,27 @@
+.lovelist {
+  width: 100%;
+  padding: 40px 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.lovelist__products {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  justify-content: flex-end;
+  gap: 40px;
+}
+
+.lovelist__empty {
+  width: 100%;
+  padding: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lovelist__empty > h3 {
+  color: #5b0888;
+}
