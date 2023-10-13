@@ -46,10 +46,10 @@ const ShopScreen = () => {
 
   return (
     <div className="shop">
-      <h1>PRODUCTS</h1>
+      <h1>#PRODUCTS#</h1>
       <div className="shop__content">
         <div className="shop__categories">
-          <h3>CATEGORIES</h3>
+          <h3>CATEGORIES:</h3>
           <ul>
             <li>
               <button
