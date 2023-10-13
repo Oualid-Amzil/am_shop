@@ -12,6 +12,7 @@
 
 .contacterror {
   width: 100%;
+
   padding: 10px;
   border-radius: 5px;
   background-color: rgba(245, 31, 31, 0.8);
@@ -26,24 +27,23 @@
 
 .contactscreen {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 20px;
 }
 
 .contact__form {
   width: 50%;
-  height: 76%;
+  min-height: 76%;
   z-index: 10;
 
   display: flex;
   flex-direction: column;
-  padding: 30px 40px;
+  padding: 20px 40px;
   align-items: center;
-  gap: 40px;
+  gap: 30px;
   border-radius: 15px;
   background-color: rgb(127, 127, 200, 0.3);
   backdrop-filter: blur(10px);
@@ -142,4 +142,114 @@
 
 .contact__inputs > button:hover {
   background-color: #fff;
+}
+
+@media (max-width: 1300px) {
+  .contact__form {
+    width: 60%;
+  }
+}
+
+@media (max-width: 1090px) {
+  .contactscreen {
+    padding: 30px 0;
+  }
+
+  .contact__form {
+    width: 70%;
+  }
+}
+
+@media (max-width: 930px) {
+  .contact__form > h1 {
+    font-size: 30px;
+  }
+
+  .name__email {
+    gap: 17px;
+  }
+
+  .contact__input > h2 {
+    font-size: 17px;
+  }
+
+  .contact__input > input {
+    padding: 10px 12px;
+  }
+
+  .contact__input > textarea {
+    padding: 10px 12px;
+  }
+
+  .contact__inputs > button {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 800px) {
+  .contact__form {
+    width: 90%;
+  }
+
+  .contact__inputs > button {
+    width: 35%;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact__form {
+    width: 80%;
+    padding: 20px 30px;
+  }
+
+  .name__email {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact__form {
+    width: 90%;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .success {
+    padding: 8px;
+
+    font-size: 13px;
+  }
+
+  .contacterror {
+    padding: 8px;
+
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 410px) {
+  .contact__form > h1 {
+    font-size: 28px;
+  }
+
+  .name__email {
+    gap: 16px;
+  }
+
+  .contact__input > h2 {
+    font-size: 15px;
+  }
+
+  .contact__input > input {
+    padding: 8px 10px;
+  }
+
+  .contact__input > textarea {
+    padding: 8px 10px;
+  }
+
+  .contact__inputs > button {
+    font-size: 14px;
+  }
 }

@@ -216,6 +216,7 @@ const ContactScreen = () => {
               {error}
             </span>
           )}
+
           <button type="submit">{isLoading ? <Loader /> : "SEND"}</button>
         </div>
       </form>
