@@ -24,10 +24,6 @@
   transform: translateX(-50%);
 }
 
-.productinfo__container > h1 {
-  color: #111;
-}
-
 .productinfo__container > button {
   position: absolute;
   top: 20px;
@@ -124,4 +120,126 @@
 .prod__info > button:hover {
   background-color: rgb(127, 127, 200);
   color: #111;
+}
+
+@media (max-width: 1200px) {
+  .productinfo__container {
+    width: 70%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .productinfo__container {
+    width: 80%;
+  }
+}
+
+@media (max-width: 840px) {
+  .productinfo__container {
+    width: 90%;
+    height: 58vh;
+  }
+}
+
+@media (max-width: 780px) {
+  .productinfo__container {
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .prod__info {
+    gap: 12px;
+  }
+
+  .prod__info > h2 {
+    font-size: 20px;
+  }
+
+  .prod__info > p {
+    font-size: 15px;
+  }
+
+  .prod__info > button {
+    padding: 8px 18px;
+  }
+
+  .prod__info > h3 {
+    font-size: 18px;
+  }
+
+  .prod__quantity > button {
+    padding: 7px;
+
+    border-radius: 6px;
+  }
+
+  .prod__quantity > span {
+    font-size: 20px;
+  }
+
+  .plus,
+  .minus {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 780px) {
+  .prod__info {
+    gap: 8px;
+  }
+
+  .prod__info > h2 {
+    font-size: 18px;
+  }
+
+  .prod__info > p {
+    font-size: 13px;
+  }
+
+  .prod__info > button {
+    padding: 6px 16px;
+  }
+
+  .prod__info > h3 {
+    font-size: 16px;
+  }
+
+  .prod__quantity > button {
+    padding: 6px;
+
+    border-radius: 4px;
+  }
+
+  .prod__quantity > span {
+    font-size: 18px;
+  }
+
+  .plus,
+  .minus {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 650px) {
+  .image__container {
+    min-width: 155px;
+  }
+}
+
+@media (max-width: 500px) {
+  .productinfo__container {
+    flex-direction: column;
+    justify-content: center;
+    height: 90%;
+    gap: 40px;
+    border-radius: 10px;
+  }
+
+  .prod__info {
+    width: 100%;
+  }
+
+  .prod__info > button {
+    align-self: flex-end;
+  }
 }
