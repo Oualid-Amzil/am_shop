@@ -20,37 +20,39 @@ const CartItem = ({ id, image, name, title, price, quantity, totale }) => {
           <h2>{title}</h2>
         </div>
       </div>
-      <div className="item__price">
-        <h5>Price:</h5>
-        <h4>{`$${price}`}</h4>
-      </div>
-      <div className="item__quantity">
-        <button
-          onClick={() =>
-            dispatch(
-              cartActions.addProdHandler({
-                id,
-                image,
-                name,
-                title,
-                price,
-                quantity: 1,
-              })
-            )
-          }
-        >
-          <FaPlus className="item__icon" />
-        </button>
-        <span>{quantity}</span>
-        <button
-          onClick={() => dispatch(cartActions.subtractQuantityHandler(id))}
-        >
-          <FaMinus className="item__icon" />
-        </button>
-      </div>
-      <div className="item__totale">
-        <h5>Totale:</h5>
-        <h4>{`$${totale}`}</h4>
+      <div className="cartitem__values">
+        <div className="item__price">
+          <h5>Price:</h5>
+          <h4>{`$${price}`}</h4>
+        </div>
+        <div className="item__quantity">
+          <button
+            onClick={() =>
+              dispatch(
+                cartActions.addProdHandler({
+                  id,
+                  image,
+                  name,
+                  title,
+                  price,
+                  quantity: 1,
+                })
+              )
+            }
+          >
+            <FaPlus className="item__icon" />
+          </button>
+          <span>{quantity}</span>
+          <button
+            onClick={() => dispatch(cartActions.subtractQuantityHandler(id))}
+          >
+            <FaMinus className="item__icon" />
+          </button>
+        </div>
+        <div className="item__totale">
+          <h5>Totale:</h5>
+          <h4>{`$${totale}`}</h4>
+        </div>
       </div>
       <button
         className="item__delete"
