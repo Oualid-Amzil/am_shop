@@ -25,3 +25,46 @@
 .lovelist__empty > h3 {
   color: #5b0888;
 }
+
+@media (max-width: 1040px) {
+  .lovelist {
+    padding: 40px 60px;
+  }
+
+  .lovelist__products {
+    gap: 30px;
+  }
+
+  .lovelist > h1 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 600px) {
+  .lovelist {
+    padding: 40px;
+    gap: 40px;
+  }
+
+  .lovelist__products {
+    column-gap: 16px;
+    row-gap: 22px;
+  }
+}
+
+@media (max-width: 500px) {
+  .lovelist > h1 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 400px) {
+  .lovelist {
+    padding: 40px 20px;
+    gap: 30px;
+  }
+
+  .lovelist > h1 {
+    font-size: 20px;
+  }
+}
