@@ -307,3 +307,21 @@
     font-size: 10px;
   }
 }
+
+@media (max-width: 400px) {
+  .truck {
+    font-size: 18px;
+  }
+
+  .first__ele > p {
+    font-size: 11px;
+  }
+
+  .logo > h1 {
+    font-size: 27px;
+  }
+
+  .bag {
+    font-size: 30px;
+  }
+}
