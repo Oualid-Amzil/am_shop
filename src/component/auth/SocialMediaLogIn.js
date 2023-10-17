@@ -1,11 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { moduleActions } from "../../app/moduleSlice";
-import {
-  signInWithGoogle,
-  signInWithFacebook,
-} from "../../app/auth/auth-actions";
+import { signInWithGoogle } from "../../app/auth/auth-actions";
 import storeImg from "../../img/hector-martinez-EG49vTtKdvI-unsplash.jpg";
 
 import { FaXmark, FaSquareFacebook } from "react-icons/fa6";
@@ -17,6 +14,7 @@ import "./SocialMediaLogIn.css";
 const SocialMediaLogIn = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const [disable, setDisable] = useState(false);
 
   return (
     <div
@@ -34,21 +32,22 @@ const SocialMediaLogIn = () => {
         <FaXmark className="auth__xmark" />
       </button>
       <div className="left__content">
-        <button
-          onClick={() => dispatch(signInWithFacebook(navigate))}
-          className="facebook"
-        >
+        <button disabled={true} className="facebook">
           <FaSquareFacebook className="leftcontent__icon" />
           <span>Sign in with Facebook</span>
         </button>
         <button
-          onClick={() => dispatch(signInWithGoogle(navigate))}
+          disabled={disable}
+          onClick={() => {
+            setDisable(true);
+            dispatch(signInWithGoogle(navigate));
+          }}
           className="google"
         >
           <FcGoogle className="leftcontent__icon" />
           <span>Sign in with Google</span>
         </button>
-        <button className="microsoft">
+        <button disabled={true} className="microsoft">
           <BsMicrosoft className="leftcontent__icon" />
           <span>Sign in with Microsoft</span>
         </button>
