@@ -13,6 +13,7 @@ export const signUp = (email, password, userName, navigate) => {
   return async (dispatch) => {
     dispatch(uiActions.error(null));
     dispatch(uiActions.isLoading(true));
+
     try {
       const response = await axios({
         method: "post",
@@ -73,6 +74,7 @@ export const signIn = (email, password, navigate) => {
   return async (dispatch) => {
     dispatch(uiActions.error(null));
     dispatch(uiActions.isLoading(true));
+
     try {
       const response = await axios({
         method: "post",

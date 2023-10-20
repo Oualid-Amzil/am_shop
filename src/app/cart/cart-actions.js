@@ -12,26 +12,6 @@ export const sendCartElements = ({
     const token = getState().auth.token;
     const userId = getState().auth.userId;
 
-    const replacer = (key, value) => {
-      const seen = new WeakSet();
-      if (typeof value === "object" && value !== null) {
-        if (seen.has(value)) {
-          return;
-        }
-        seen.add(value);
-      }
-      return value;
-    };
-
-    const serializedData = JSON.stringify(
-      {
-        products,
-        totaleAmount,
-        totaleQuantity,
-      },
-      replacer
-    );
-
     dispatch(uiActions.addFirebaseError({ message: null }));
     try {
       await axios({
@@ -40,7 +20,11 @@ export const sendCartElements = ({
         https://am-shop-fcfb7-default-rtdb.firebaseio.com/
 cart/
         ${userId}.json?auth=${token}`,
-        data: serializedData,
+        data: {
+          products,
+          totaleAmount,
+          totaleQuantity,
+        },
       });
     } catch (error) {
       dispatch(uiActions.addFirebaseError({ message: error.message }));
@@ -64,6 +48,7 @@ cart/
         ${userId}.json?auth=${token}
         `,
       });
+
       dispatch(
         cartActions.replaceCartHandler({
           products: response.data?.products || [],
