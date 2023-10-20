@@ -7,6 +7,7 @@ import { FaXmark } from "react-icons/fa6";
 import { FaPlus, FaMinus } from "react-icons/fa6";
 import Module from "../component/UI/Module";
 import { sendCartElements } from "../app/cart/cart-actions";
+import { sendLovedProds } from "../app/love/love-actions";
 import "animate.css";
 import "./ProductInfo.css";
 
@@ -15,6 +16,7 @@ let isInitial = true;
 const ProductInfo = () => {
   const dispatch = useDispatch();
 
+  const loveList = useSelector((state) => state.love.list);
   const cartProducts = useSelector((state) => state.cart.products);
   const totaleAmount = useSelector((state) => state.cart.totaleAmount);
   const totaleQuantity = useSelector((state) => state.cart.totaleQuantity);
@@ -26,12 +28,15 @@ const ProductInfo = () => {
 
   useEffect(() => {
     if (isInitial) {
+      isInitial = false;
       return;
     }
+
     dispatch(
       sendCartElements({ products: cartProducts, totaleAmount, totaleQuantity })
     );
-  }, [totaleQuantity, cartProducts, totaleAmount, dispatch]);
+    dispatch(sendLovedProds(loveList));
+  }, [totaleQuantity, cartProducts, totaleAmount, loveList, dispatch]);
 
   return (
     <Module>
