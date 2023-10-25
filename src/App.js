@@ -27,7 +27,7 @@ function App() {
       {showAuth && <AuthScreen />}
       <Header />
       <Routes>
-        <Route path="/" element={<Navigate to="/home" />}></Route>
+        <Route path="/*" element={<Navigate to="/home" />}></Route>
         <Route path="/home" element={<HomeScreen />}></Route>
         <Route path="/about" element={<AboutScreen />}></Route>
         <Route path="/contact" element={<ContactScreen />}></Route>
